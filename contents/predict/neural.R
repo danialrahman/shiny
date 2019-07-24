@@ -51,32 +51,32 @@ neuralPredict_UI<- function(){
                             ## First Row
                             fluidRow(
                               column(width = 3,
-                                     numericInput("cementInputN",label="Cement:",value=102)   
+                                     numericInput("cementInputN",label="Cement: (102)",value=102)   
                               ),
                               column(width = 3,
-                                     numericInput("slagInputN",label="Slag:",value=153)   
+                                     numericInput("slagInputN",label="Slag: (153)",value=153)   
                               ),
                               column(width = 3,
-                                     numericInput("ashInputN",label="Ash:",value=0)   
+                                     numericInput("ashInputN",label="Ash: (0)",value=0)   
                               ),
                               column(width = 3,
-                                     numericInput("waterInputN",label="Water:",value=192)   
+                                     numericInput("waterInputN",label="Water: (192)",value=192)   
                               )
                             ),
                             
                             ## Second Row
                             fluidRow(
                               column(width = 3,
-                                     numericInput("spInputN",label="SuperPlastic:",value=0)   
+                                     numericInput("spInputN",label="SuperPlastic: (0)",value=0)   
                               ),
                               column(width = 3,
-                                     numericInput("caggInputN",label="Course Agg:",value=887)   
+                                     numericInput("caggInputN",label="Course Agg: (887)",value=887)   
                               ),
                               column(width = 3,
-                                     numericInput("faggInputN",label="Fine Agg:",value=942)   
+                                     numericInput("faggInputN",label="Fine Agg: (942)",value=942)   
                               ),
                               column(width = 3,
-                                     numericInput("ageInputN",label="Age:",value=90)   
+                                     numericInput("ageInputN",label="Age: (3)",value=3)   
                               )
                             ),
                             
@@ -142,7 +142,7 @@ neuralPredict_Server<- function(input, output, session){
                                 input$ashInputN,input$waterInputN,
                                 input$spInputN,input$caggInputN,
                                 input$faggInputN,input$ageInputN)
-      colnames(inputDatasN) <- colnames(concreteData[1:8])
+      colnames(inputDatasN) <- colnames(concreteData_norm[1:8])
       
       inputDatasN_norm <- data.frame(
         normalizeSingle(inputDatasN$cement,concreteData$cement),

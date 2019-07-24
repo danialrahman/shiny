@@ -4,12 +4,10 @@ library(plotly)
 packageVersion('plotly')
 library(shinyjs)
 library(neuralnet)
-library(DT)
 
 source("dashboard/header.R")
 source("dashboard/sidebar.R")
 source("contents/dashboard.R")
-source("contents/table.R")
 source("contents/piechart.R")
 source("contents/histogram.R")
 source("contents/scatter.R")
@@ -36,7 +34,6 @@ ui <- dashboardPage(
     ),
     tabItems(
       dashboard_UI(),
-      table_UI(),
       piechart_UI(),
       histogram_UI(),
       scatter_UI(),
@@ -50,7 +47,6 @@ ui <- dashboardPage(
 server <- function(input, output, session=NULL) {
   set.seed(122)
   dashboard_Server(input, output)
-  table_Server(input, output, session)
   piechart_Server(input, output)  
   histogram_Server(input, output, session)
   scatter_Server(input, output, session)

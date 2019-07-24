@@ -1,3 +1,5 @@
+hstConcreteData <- concreteData
+
 histogram_UI<- function(){
   tabItem(tabName = "histogram",
   
@@ -34,7 +36,6 @@ histogram_UI<- function(){
 
 histogram_Server<- function(input, output, session){
   
-  hstConcreteData <- concreteData
   
   observeEvent(input$materialType, {
     #session$sendCustomMessage(type='alert',message=(input$materialType))

@@ -18,32 +18,32 @@ csvPredict_UI<- function(){
                             ## First Row
                             fluidRow(
                               column(width = 3,
-                                     numericInput("cementInput",label="Cement:",value=102)   
+                                     numericInput("cementInput",label="Cement: (102)",value="")   
                               ),
                               column(width = 3,
-                                     numericInput("slagInput",label="Slag:",value=153)   
+                                     numericInput("slagInput",label="Slag: (153)",value="")   
                               ),
                               column(width = 3,
-                                     numericInput("ashInput",label="Ash:",value=0)   
+                                     numericInput("ashInput",label="Ash: (0)",value="")   
                               ),
                               column(width = 3,
-                                     numericInput("waterInput",label="Water:",value=192)   
+                                     numericInput("waterInput",label="Water: (192)",value="")   
                               )
                             ),
                             
                             ## Second Row
                             fluidRow(
                               column(width = 3,
-                                     numericInput("spInput",label="SuperPlastic:",value=0)   
+                                     numericInput("spInput",label="SuperPlastic: (0)",value="")   
                               ),
                               column(width = 3,
-                                     numericInput("caggInput",label="Course Agg:",value=887)   
+                                     numericInput("caggInput",label="Course Agg: (887)",value="")   
                               ),
                               column(width = 3,
-                                     numericInput("faggInput",label="Fine Agg:",value=942)   
+                                     numericInput("faggInput",label="Fine Agg: (942)",value="")   
                               ),
                               column(width = 3,
-                                     numericInput("ageInput",label="Age:",value=3)   
+                                     numericInput("ageInput",label="Age: (3)",value="")   
                               )
                             ),
                             
