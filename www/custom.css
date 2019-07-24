@@ -1,0 +1,16 @@
+.main-header .logo {
+  font-family: "Georgia", Times, "Times New Roman", serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.fullwidth{
+  width: 100%;
+}
+
+
+.minimize{
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
